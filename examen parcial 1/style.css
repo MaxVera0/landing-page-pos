@@ -1,0 +1,350 @@
+/*Maxmiliano Emmanuel Vera Araujo. ID:339490.
+ISC 5-A.*/
+
+/*Variables*/
+:root{
+    --primary-color: #204D67; /* Azul profundo */
+    --secondary-color: #8FB5C8; /* Azul cielo */
+    --cta-color: #D96F59; /* Coral suave */
+    --bg-light: #FAF8F4; /* Blanco cálido */
+    --surface-color: #E9DED1; /* Arena */
+    --text-dark: #183549; /* Azul noche */
+    --text-gray: #666;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    font-family: 'Inter', sans-serif; /* Fuente general */
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Cormorant Garamond', serif; /* Fuente para títulos */
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Tipografía de apoyo */
+.subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+}
+
+/*Header y Logo*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: var(--bg-light);
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.logo-icon {
+    width: 30px;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar a{
+    color: var(--text-dark);
+    font-size: 0.9rem;
+}
+
+/*Plan your trip*/
+.btn-salmon {
+    background-color: var(--cta-color);
+    color: white !important;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: opacity 0.2s;
+    display: inline-block;
+}
+
+.btn-salmon:hover {
+    opacity: 0.9;
+}
+
+.salmon-text {
+    color: var(--cta-color) !important;
+}
+
+/*Hero a pantalla completa*/
+.hero{
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('img\ princ.jpg') center/cover no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 5%;
+}
+
+.hero-text{
+    max-width: 800px;
+    color: white;
+}
+
+.hero-text .subtitle {
+    color: white;
+}
+
+.hero-text h1{
+    font-size: 4rem;
+    font-weight: normal;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.hero-text p{
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+/*Destinos Centrados*/
+.destinations{
+    background-color: var(--bg-light);
+    padding: 5rem 5%;
+}
+
+.destinations-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.destinations-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin: 0.5rem 0 1rem 0;
+    font-weight: normal;
+}
+
+.destinations-grid{
+    display: grid;
+    /* 3 columnas del mismo tamaño */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.card{
+    background-color: white;
+    padding-bottom: 1.5rem;
+    transition: transform 0.2s;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+/*Etiquetas flotantes en cajas*/
+.badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    color: var(--text-gray);
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card h3{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    padding: 0 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p{
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    padding: 0 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.link-action {
+    color: var(--cta-color);
+    padding: 0 1.5rem;
+    font-size: 0.9rem;
+}
+
+/*Cajita de reserva*/
+.plan-trip {
+    display: flex;
+    background-color: var(--surface-color); 
+    align-items: center;
+}
+
+.plan-image {
+    flex: 1;
+}
+
+.plan-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.plan-content {
+    flex: 1;
+    padding: 5rem;
+    background-color: white;
+    margin: 4rem;
+}
+
+.plan-content h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+.plan-content p {
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.booking-form input, .booking-form select {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    color: var(--text-gray);
+    font-family: 'Inter', sans-serif;
+    outline: none;
+}
+
+.booking-form .btn-salmon {
+    align-self: flex-start;
+    padding: 1rem 2rem;
+}
+
+/*Testimonial Inferior*/
+.testimonial {
+    background: url('piepag.jpg') center/cover;
+    padding: 6rem 5%;
+    text-align: center;
+}
+
+.testimonial-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial blockquote {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}
+
+.testimonial cite {
+    font-size: 0.8rem;
+    font-style: normal;
+    letter-spacing: 2px;
+    color: var(--text-dark);
+}
+
+.testimonial cite span {
+    color: var(--text-gray);
+}
+
+/*Footer*/
+.footer{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 4rem 5%;
+    background-color: var(--bg-light);
+}
+
+.footer-col h4 {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.footer-col a, .footer-col p {
+    display: block;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-slogan {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    margin-top: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.footer-icons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-icons a {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+}
+
+/*Margen final azul*/
+.copyright-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 5%;
+    font-size: 0.8rem;
+}
+
+.logo-icon-small {
+    width: 20px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+}
